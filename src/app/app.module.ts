@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { RestauranteComponent } from './restaurantes/restaurante/restaurante.component';
+import { RestaurantesService } from './restaurantes/restaurantes.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { RestauranteComponent } from './restaurantes/restaurante/restaurante.com
     BrowserModule,    
     AppRotasModule
   ],
-  providers: [],
+  providers: [RestaurantesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
