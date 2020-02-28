@@ -3,10 +3,12 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable  } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
+import 'rxjs/add/operator/catch';
 
 import {Restaurante} from './restaurante/restaurante.model';
 import {API} from '../app.api';
+import {ErrorHandler} from '../app.error-handler';
+import { from } from 'rxjs';
 
 @Injectable()
 export class RestaurantesService{
@@ -35,7 +37,8 @@ export class RestaurantesService{
    
    
     restaurantes(): Observable<Restaurante[]>{
-        return this.http.get<Restaurante[]>(`${API}/restaurants`);
+        return this.http.get<Restaurante[]>(`${API}/restaurants`)
+        .catch(ErrorHandler.handleError);
         
     }
     
