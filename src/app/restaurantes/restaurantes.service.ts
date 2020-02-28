@@ -41,6 +41,11 @@ export class RestaurantesService{
         .catch(ErrorHandler.handleError);
         
     }
+
+    restaurantePorId(id: string): Observable<Restaurante>{
+        return this.http.get<Restaurante>(`${API}/restaurants/${id}`)
+        .catch(ErrorHandler.handleError);
+    }
     
     
     
