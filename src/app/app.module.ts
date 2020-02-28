@@ -14,6 +14,7 @@ import { RestauranteDetalhesComponent } from './restaurante-detalhes/restaurante
 import { MenuComponent } from './restaurante-detalhes/menu/menu.component';
 import { MenuItemComponent } from './restaurante-detalhes/menu-item/menu-item.component';
 import { CarrinhoComprasComponent } from './restaurante-detalhes/carrinho-compras/carrinho-compras.component';
+import { ReviewsComponent } from './restaurante-detalhes/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CarrinhoComprasComponent } from './restaurante-detalhes/carrinho-compra
     RestauranteDetalhesComponent,
     MenuComponent,
     MenuItemComponent,
-    CarrinhoComprasComponent
+    CarrinhoComprasComponent,
+    ReviewsComponent
 
   ],
   imports: [
