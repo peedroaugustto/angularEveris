@@ -10,7 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { RestauranteComponent } from './restaurantes/restaurante/restaurante.component';
 import { RestaurantesService } from './restaurantes/restaurantes.service';
-
+import { RestauranteDetalhesComponent } from './restaurante-detalhes/restaurante-detalhes.component';
+import { MenuComponent } from './restaurante-detalhes/menu/menu.component';
+import { MenuItemComponent } from './restaurante-detalhes/menu-item/menu-item.component';
+import { CarrinhoComprasComponent } from './restaurante-detalhes/carrinho-compras/carrinho-compras.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,11 @@ import { RestaurantesService } from './restaurantes/restaurantes.service';
     HomeComponent,    
     AboutComponent,
     RestaurantesComponent,
-    RestauranteComponent
+    RestauranteComponent,
+    RestauranteDetalhesComponent,
+    MenuComponent,
+    MenuItemComponent,
+    CarrinhoComprasComponent
 
   ],
   imports: [
