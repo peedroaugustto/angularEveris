@@ -1,11 +1,11 @@
 export interface Restaurante{
 
     id: string
-    nome: string
-    categoria: string
-    estimativaDeEntrega: string
-    avaliacao: number
-    imagem: string
+    name: string
+    category: string
+    deliveryEstimate: string
+    rating: number
+    imagePath: string
 
 
 }

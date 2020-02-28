@@ -1,9 +1,18 @@
-import {Restaurante} from './restaurante/restaurante.model';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
+import { Observable  } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+
+import {Restaurante} from './restaurante/restaurante.model';
+import {API} from '../app.api';
+
+@Injectable()
 export class RestaurantesService{
 
-    constructor(){}
-
+    constructor(private http: HttpClient){}
+    /*
     restau: Restaurante[] = [ 
         {
         id: "bread-bakery",
@@ -22,9 +31,14 @@ export class RestaurantesService{
           imagem: "assets/img/restaurants/burgerhouse.png"
         }
     ]
-
-    restaurantes(): Restaurante[]{
-        return this.restau;
+    */
+   
+   
+    restaurantes(): Observable<Restaurante[]>{
+        return this.http.get<Restaurante[]>(`${API}/restaurants`);
+        
     }
+    
+    
     
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRotasModule } from "./app-rotas.module";
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ import { RestaurantesService } from './restaurantes/restaurantes.service';
   ],
   imports: [
     BrowserModule,    
-    AppRotasModule
+    AppRotasModule,
+    HttpClientModule
   ],
   providers: [RestaurantesService],
   bootstrap: [AppComponent]
